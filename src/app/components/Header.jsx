@@ -1,53 +1,78 @@
-import { useState } from "react";
-import BookNowButton from "./BookNowButton";
+import { useState } from 'react'
+import BookNowButton from './BookNowButton'
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     // When using :before, add before:pointer-events-none so that hover effects work
-    <header className="container mx-auto flex justify-between p-2 before:w-screen before:shadow-md before:absolute before:left-0 before:h-10 before:pointer-events-none">
+    <header className="container mx-auto flex justify-between p-2 before:pointer-events-none before:absolute before:left-0 before:h-10 before:w-screen before:shadow-md">
       {/* Desktop Menu */}
       <section>
-        <p className="text-blue-900 text-2xl font-bold tracking-wider">
-          Dhurandar Oil
-        </p>
+        <p className="text-2xl font-bold tracking-wider text-blue-900">Dhurandar Oil</p>
       </section>
 
-      <nav className=" hidden md:flex text-xl items-baseline">
+      <nav className="hidden items-baseline text-xl md:flex">
         <ul className="flex gap-3">
-          <li><a href="" className="hover:text-blue-900 transition duration-300 ease-in-out">Home</a></li>
-          <li><a href="" className="hover:text-blue-900 transition duration-300 ease-in-out">Benefit</a></li>
-          <li><a href="" className="hover:text-blue-900 transition duration-300 ease-in-out">How it works</a></li>
-          <li><a href="" className="hover:text-blue-900 transition duration-300 ease-in-out mr-4">Testimonials</a></li>
+          <li>
+            <a href="" className="transition duration-300 ease-in-out hover:text-blue-900">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="" className="transition duration-300 ease-in-out hover:text-blue-900">
+              Benefit
+            </a>
+          </li>
+          <li>
+            <a href="" className="transition duration-300 ease-in-out hover:text-blue-900">
+              How it works
+            </a>
+          </li>
+          <li>
+            <a href="" className="mr-4 transition duration-300 ease-in-out hover:text-blue-900">
+              Testimonials
+            </a>
+          </li>
         </ul>
         <BookNowButton content="Buy Now"></BookNowButton>
-        </nav>
+      </nav>
 
       {/* Hamburger (z-index added, aria attrs, icon toggles to cross) */}
       <button
-        className="md:hidden text-2xl z-50"
-        onClick={() => setOpen(prev => !prev)}
+        className="z-50 text-2xl md:hidden"
+        onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
         aria-controls="mobile-menu"
-        aria-label={open ? "Close menu" : "Open menu"}
+        aria-label={open ? 'Close menu' : 'Open menu'}
         type="button"
       >
-        {open ? "×" : "☰"}
+        {open ? '×' : '☰'}
       </button>
 
       {/* Mobile Menu (z-index added, id for aria-controls) */}
       {open && (
-        <section id="mobile-menu" className="absolute top-12 h-screen w-screen left-0  backdrop-blur-xl border-t-2 border-t-slate-400 p-4 md:hidden z-50">
+        <section
+          id="mobile-menu"
+          className="absolute top-12 left-0 z-50 h-screen w-screen border-t-2 border-t-slate-400 p-4 backdrop-blur-xl md:hidden"
+        >
           <ul className="flex flex-col gap-2">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Benefit</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <BookNowButton content="Buy Now"></BookNowButton>          
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Benefit</a>
+            </li>
+            <li>
+              <a href="#">How it works</a>
+            </li>
+            <li>
+              <a href="#">Testimonials</a>
+            </li>
+            <BookNowButton content="Buy Now"></BookNowButton>
           </ul>
         </section>
       )}
     </header>
-  );
+  )
 }
