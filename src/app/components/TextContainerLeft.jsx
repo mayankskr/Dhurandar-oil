@@ -3,7 +3,7 @@ import BookNowButton from "./BookNowButton"
 import TrustBadge from "./TrustBadge"
 export default function TextContainerLeft(){
     return(
-        <div className="TextContainerLeft space-y-4">
+        <section className="TextContainerLeft space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-normal">
                 Natural Relief for
                 <span className="text-blue-600"> Joint Pain</span>
@@ -13,11 +13,10 @@ export default function TextContainerLeft(){
             Dhurandar Joint Pain Oil provides fast, effective relief from joint and muscle pain.
             </p>
             <TrustBadge></TrustBadge>
-            <div>
+            <section>
             <BookNowButton content="Order Now"></BookNowButton>
-            </div>
+            </section>
             <TrustIcon></TrustIcon>
-            <br />
-        </div>
+        </section>
     )
 }

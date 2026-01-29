@@ -1,6 +1,10 @@
 import Home from "./Home"
+import Benefit from "./Benefit"
 export default function Main(){
     return(
-        <Home></Home>
+        <section>
+            <Home></Home>
+            <Benefit></Benefit>
+        </section>
     )
 }

@@ -8,11 +8,11 @@ export default function Header() {
     // When using :before, add before:pointer-events-none so that hover effects work
     <header className="container mx-auto flex justify-between p-2 before:w-screen before:shadow-md before:absolute before:left-0 before:h-10 before:pointer-events-none">
       {/* Desktop Menu */}
-      <div>
+      <section>
         <p className="text-blue-900 text-2xl font-bold tracking-wider">
           Dhurandar Oil
         </p>
-      </div>
+      </section>
 
       <nav className=" hidden md:flex text-xl items-baseline">
         <ul className="flex gap-3">
@@ -38,7 +38,7 @@ export default function Header() {
 
       {/* Mobile Menu (z-index added, id for aria-controls) */}
       {open && (
-        <div id="mobile-menu" className="absolute top-12 h-screen w-screen left-0  backdrop-blur-xl border-t-2 border-t-slate-400 p-4 md:hidden z-50">
+        <section id="mobile-menu" className="absolute top-12 h-screen w-screen left-0  backdrop-blur-xl border-t-2 border-t-slate-400 p-4 md:hidden z-50">
           <ul className="flex flex-col gap-2">
             <li><a href="#">Home</a></li>
             <li><a href="#">Benefit</a></li>
@@ -46,7 +46,7 @@ export default function Header() {
             <li><a href="#">Testimonials</a></li>
             <BookNowButton content="Buy Now"></BookNowButton>          
           </ul>
-        </div>
+        </section>
       )}
     </header>
   );

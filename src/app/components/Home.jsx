@@ -1,13 +1,13 @@
 import TextContainerLeft from "./TextContainerLeft"
 export default function Home(){
     return(
-        <div className="Home bg-blue-50 py-4">
-            <div className="container md:flex mx-auto">
+        <section className="Home bg-blue-50 pl-4 pt-4 shadow-md">
+            <section className="container md:flex md:justify-between mx-auto mb-4">
                 <TextContainerLeft></TextContainerLeft>
-                <div>
-                    <img src="src\assets\mainImg.png" className="md:max-w-md" alt="" loading="lazy" />
-                </div>
-            </div>
-        </div>
+                <section className="flex">
+                    <img src="src\assets\mainImg.png" className="xl:max-w-md object-cover" alt="" loading="lazy" />
+                </section>
+            </section>
+        </section>
     )
 }
