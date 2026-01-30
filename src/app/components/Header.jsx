@@ -90,7 +90,13 @@ export default function Header() {
               </a>
             </li>
           </ul>
-          <BookNowButton content="Buy Now" />
+          <a
+                  href="#buy"
+                  onClick={(e) => handleMobileNav(e, 'buy')}
+                  className="w-fit rounded-xl border-2 border-blue-900 bg-blue-900 px-2 text-xl text-white transition duration-300 ease-in-out xl:hover:bg-white xl:hover:text-blue-900"
+                >
+                  Buy Now
+                </a>
         </nav>
 
         <button
