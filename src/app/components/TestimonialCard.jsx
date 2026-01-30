@@ -4,7 +4,7 @@ export default function TestimonialCard({ user }) {
   // We are deconstructing the array
   return (
     <div className="TestimonialCard group rounded-2xl bg-white/10 p-6 backdrop-blur-sm transition-colors hover:bg-white/20">
-      <Quote className="mb-4 h-10 w-10 rotate-180 text-blue-300 group-hover:text-white duration-300 ease-in-out" />
+      <Quote className="mb-4 h-10 w-10 rotate-180 text-blue-300 duration-300 ease-in-out group-hover:text-white" />
 
       <div className="flex gap-1">
         {[...Array(5)].map((_, i) => (
@@ -14,7 +14,7 @@ export default function TestimonialCard({ user }) {
 
       <p className="leading-relaxed text-blue-50">{user.quote}</p>
 
-      <Quote className="mb-4 ml-[80%] h-10 w-10 text-blue-300 group-hover:text-white duration-300 ease-in-out" />
+      <Quote className="mb-4 ml-[80%] h-10 w-10 text-blue-300 duration-300 ease-in-out group-hover:text-white" />
 
       <div className="flex items-center gap-4">
         <img src={user.img} alt={user.username} className="h-12 w-12 rounded-full object-cover" />

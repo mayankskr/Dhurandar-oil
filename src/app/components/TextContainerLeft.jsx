@@ -14,7 +14,16 @@ export default function TextContainerLeft() {
       </p>
       <TrustBadge></TrustBadge>
       <section>
-        <BookNowButton content="Order Now"></BookNowButton>
+        <a
+          href="#buy"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          className="w-fit rounded-xl border-2 border-blue-900 bg-blue-900 px-2 text-xl text-white transition duration-300 ease-in-out xl:hover:bg-white xl:hover:text-blue-900"
+        >
+          Order Now
+        </a>
       </section>
       <TrustIcon></TrustIcon>
     </section>

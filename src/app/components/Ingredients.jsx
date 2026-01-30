@@ -60,7 +60,7 @@ export default function Ingredients() {
                   className="h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
-              <div className="p-4 bg-blue-50">
+              <div className="bg-blue-50 p-4">
                 <h4 className="mb-2 font-semibold text-gray-900">{item.title}</h4>
                 <p className="text-sm text-gray-600">{item.desc}</p>
               </div>

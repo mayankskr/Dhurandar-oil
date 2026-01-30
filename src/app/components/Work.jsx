@@ -42,7 +42,10 @@ export default function Work() {
           </div>
           <div className="order-1 space-y-6 md:order-2">
             {steps.map((step) => (
-              <div key={step.id} className="flex gap-4 hover:bg-blue-300 rounded-2xl transition hover:-translate-2 duration-300 ease-in-out">
+              <div
+                key={step.id}
+                className="flex gap-4 rounded-2xl transition duration-300 ease-in-out hover:-translate-2 hover:bg-blue-300"
+              >
                 <div className="shrink-0">
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-blue-600 to-blue-800">
                     <span className="text-xl font-bold text-white">

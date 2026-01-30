@@ -6,7 +6,7 @@ import Testimonials from './Testimonials'
 import Buy from './Buy'
 export default function Main() {
   return (
-    <section>
+    <section className="">
       <Home></Home>
       <Benefit></Benefit>
       <Work></Work>
