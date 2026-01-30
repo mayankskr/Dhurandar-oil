@@ -6,7 +6,8 @@ export default function Header() {
 
   return (
     // When using :before, add before:pointer-events-none so that hover effects work
-    <header className="container mx-auto flex justify-between p-2 before:pointer-events-none before:absolute before:left-0 before:h-10 before:w-screen before:shadow-md">
+    <section className='flex justify-center bg-blue-50'>
+      <header className="container mx-auto fixed z-20 flex justify-between p-2 before:pointer-events-none before:fixed before:left-0 before:bg-blue-50 before:-z-10 before:h-12 before:top-0 before:w-screen before:shadow-md">
       {/* Desktop Menu */}
       <section>
         <p className="text-2xl font-bold tracking-wider text-blue-900">Dhurandar Oil</p>
@@ -74,5 +75,7 @@ export default function Header() {
         </section>
       )}
     </header>
+    </section>
+
   )
 }

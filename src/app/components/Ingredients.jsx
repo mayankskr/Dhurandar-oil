@@ -33,7 +33,7 @@ const ingredients = [
 
 export default function Ingredients() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white">
       <div className="container mx-auto p-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">

@@ -29,7 +29,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="bg-linear-to-br from-blue-900 to-blue-800 py-20 text-white"
+      className="bg-linear-to-br from-blue-900 to-blue-800 p-4 text-white"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">

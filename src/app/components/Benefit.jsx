@@ -41,7 +41,7 @@ const Cards = [
 
 export default function Benefit() {
   return (
-    <section className="Benefit container mx-auto p-4 shadow-xl">
+    <section className="Benefit container mx-auto p-4">
       <section className="text-center">
         <h1 className="text-4xl leading-tight font-bold tracking-wider text-slate-900">
           Why Choose Dhurandar?
