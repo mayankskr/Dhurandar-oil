@@ -3,31 +3,31 @@ const ingredients = [
     id: 1,
     title: 'Nilgiri Oil',
     desc: 'It has strong anti-inflammatory properties, which help reduce pain in the joints and muscles.',
-    img: 'src/assets/Nilgiri_Oil.webp',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Nilgiri_Oil.webp',
   },
   {
     id: 2,
     title: 'Sonth Oil',
     desc: 'Helps to make joints flexible by reducing their stiffness and making movement easier.',
-    img: 'src/assets/Sonth_Oil.webp',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Sonth_Oil.webp',
   },
   {
     id: 3,
     title: 'Lavang Oil',
     desc: 'It has strong anti-oxidant properties that help improve blood circulation around joints. ',
-    img: 'src/assets/Lavanga_Oil.webp',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Lavanga_Oil.webp',
   },
   {
     id: 4,
     title: 'Roghan Phosphorus',
     desc: 'This herb inside Dhurandar makes joints and bones stronger from within. ',
-    img: 'src/assets/Rogan_Phosphorus.webp',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Rogan_Phosphorus.webp',
   },
   {
     id: 5,
     title: 'Til Oil',
     desc: 'This natural oil nourishes the joints and muscles, reducing swelling.',
-    img: 'src/assets/Til_Oil.webp',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Til_Oil.webp',
   },
 ]
 

@@ -6,9 +6,9 @@ export default function Home() {
         <TextContainerLeft></TextContainerLeft>
         <section className="flex">
           <img
-            src="src\assets\mainImg.png"
+            src="https://sunil.drpilesfree.com/mayank/dhurandar/assets/mainImg.png"
             className="object-cover xl:max-w-md"
-            alt=""
+            alt="Image"
             loading="lazy"
           />
         </section>

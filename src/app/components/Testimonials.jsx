@@ -4,7 +4,7 @@ const testimonials = [
     id: 1,
     username: 'Rajesh Kumar',
     meta: '62 years, Mumbai',
-    img: 'src/assets/Rajesh.jpg',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Rajesh.jpg',
     quote:
       'After years of knee pain, I finally found relief with Dhurandar. I can now walk without discomfort and even started my morning walks again!',
   },
@@ -12,7 +12,7 @@ const testimonials = [
     id: 2,
     username: 'Priya Sharma',
     meta: '45 years, Delhi',
-    img: 'src/assets/PriyaSharma.jpg',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/PriyaSharma.jpg',
     quote:
       'As a yoga instructor, joint flexibility is crucial for me. Dhurandar has become an essential part of my daily routine. Highly recommended!',
   },
@@ -20,7 +20,7 @@ const testimonials = [
     id: 3,
     username: 'Anil Patel',
     meta: '58 years, Bangalore',
-    img: 'src/assets/AnilPatel.jpg',
+    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/AnilPatel.jpg',
     quote:
       'I was skeptical at first, but Dhurandar proved me wrong. The pain relief is fast and long-lasting. No more dependency on pain killers!',
   },

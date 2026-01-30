@@ -35,7 +35,7 @@ export default function Work() {
         <div className="mb-16 grid items-center gap-12 md:grid-cols-2">
           <div className="order-2 overflow-hidden rounded-2xl md:order-1">
             <img
-              src="src\assets\neckPain.png"
+              src="https://sunil.drpilesfree.com/mayank/dhurandar/assets/neckPain.png"
               alt="Pain relief therapy"
               className="w-full transition duration-300 ease-in-out hover:scale-105"
             />
