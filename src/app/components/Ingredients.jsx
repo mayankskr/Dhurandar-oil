@@ -1,37 +1,39 @@
+import { memo } from 'react'
+
 const ingredients = [
   {
     id: 1,
     title: 'Nilgiri Oil',
     desc: 'It has strong anti-inflammatory properties, which help reduce pain in the joints and muscles.',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Nilgiri_Oil.webp',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917907/Nilgiri_Oil_j09qio.jpg',
   },
   {
     id: 2,
     title: 'Sonth Oil',
     desc: 'Helps to make joints flexible by reducing their stiffness and making movement easier.',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Sonth_Oil.webp',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917907/Sonth_Oil_cxuwdf.jpg',
   },
   {
     id: 3,
     title: 'Lavang Oil',
     desc: 'It has strong anti-oxidant properties that help improve blood circulation around joints. ',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Lavanga_Oil.webp',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917907/Lavanga_Oil_lal49v.jpg',
   },
   {
     id: 4,
     title: 'Roghan Phosphorus',
     desc: 'This herb inside Dhurandar makes joints and bones stronger from within. ',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Rogan_Phosphorus.webp',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917905/Rogan_Phosphorus_getfy1.webp',
   },
   {
     id: 5,
     title: 'Til Oil',
     desc: 'This natural oil nourishes the joints and muscles, reducing swelling.',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Til_Oil.webp',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917907/Til_Oil_ta5wg9.jpg',
   },
 ]
 
-export default function Ingredients() {
+const Ingredients = memo(function Ingredients() {
   return (
     <section className="bg-white">
       <div className="container mx-auto p-4">
@@ -57,6 +59,8 @@ export default function Ingredients() {
                   src={item.img}
                   alt={item.title}
                   loading="lazy"
+                  width="300"
+                  height="300"
                   className="h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
@@ -70,4 +74,6 @@ export default function Ingredients() {
       </div>
     </section>
   )
-}
+})
+
+export default Ingredients

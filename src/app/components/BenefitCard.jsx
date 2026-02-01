@@ -1,4 +1,6 @@
-export default function BenefitCard({ icon: Icon, heading, content }) {
+import { memo } from 'react'
+
+const BenefitCard = memo(function BenefitCard({ icon: Icon, heading, content }) {
   return (
     <section className="BenefitCard group rounded-2xl border border-blue-200 bg-blue-200 p-6 transition-all duration-300 ease-in-out hover:bg-blue-800 hover:shadow-lg">
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 transition-all duration-300 ease-in-out group-hover:bg-blue-50">
@@ -14,4 +16,6 @@ export default function BenefitCard({ icon: Icon, heading, content }) {
       </div>
     </section>
   )
-}
+})
+
+export default BenefitCard

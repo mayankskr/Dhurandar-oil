@@ -1,5 +1,7 @@
+import { memo } from 'react'
 import { Zap, Heart, Leaf, Users, Clock, ShieldCheck } from 'lucide-react'
 import BenefitCard from './BenefitCard'
+
 const Cards = [
   {
     id: 1,
@@ -39,7 +41,7 @@ const Cards = [
   },
 ]
 
-export default function Benefit() {
+const Benefit = memo(function Benefit() {
   return (
     <section id="benefit" className="Benefit container mx-auto p-4">
       <section className="text-center">
@@ -63,4 +65,6 @@ export default function Benefit() {
       </section>
     </section>
   )
-}
+})
+
+export default Benefit

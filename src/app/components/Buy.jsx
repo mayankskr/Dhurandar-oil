@@ -1,10 +1,11 @@
+import { memo } from 'react'
 import BookNowButton from './BookNowButton'
-export default function Buy() {
+
+const Buy = memo(function Buy() {
   return (
     <section id="buy" className="bg-white py-4">
       <div className="container mx-auto px-4">
         {/* Heading */}
-
         <h1 className="bg-linear-to-r from-black via-blue-400 to-black bg-clip-text pb-8 text-center text-4xl font-semibold text-transparent md:text-5xl">
           Buy Now and Get Relief Today
         </h1>
@@ -22,4 +23,6 @@ export default function Buy() {
       </div>
     </section>
   )
-}
+})
+
+export default Buy

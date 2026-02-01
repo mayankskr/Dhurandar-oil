@@ -1,10 +1,12 @@
+import { memo } from 'react'
 import TestimonialCard from './TestimonialCard'
+
 const testimonials = [
   {
     id: 1,
     username: 'Rajesh Kumar',
     meta: '62 years, Mumbai',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/Rajesh.jpg',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917950/Rajesh_jicuaa.jpg',
     quote:
       'After years of knee pain, I finally found relief with Dhurandar. I can now walk without discomfort and even started my morning walks again!',
   },
@@ -12,7 +14,7 @@ const testimonials = [
     id: 2,
     username: 'Priya Sharma',
     meta: '45 years, Delhi',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/PriyaSharma.jpg',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917950/PriyaSharma_abz4rl.jpg',
     quote:
       'As a yoga instructor, joint flexibility is crucial for me. Dhurandar has become an essential part of my daily routine. Highly recommended!',
   },
@@ -20,12 +22,13 @@ const testimonials = [
     id: 3,
     username: 'Anil Patel',
     meta: '58 years, Bangalore',
-    img: 'https://sunil.drpilesfree.com/mayank/dhurandar/assets/AnilPatel.jpg',
+    img: 'https://res.cloudinary.com/dym1rigju/image/upload/w_300,h_300,c_fill,q_auto,f_auto/v1769917949/AnilPatel_bzdjrv.jpg',
     quote:
       'I was skeptical at first, but Dhurandar proved me wrong. The pain relief is fast and long-lasting. No more dependency on pain killers!',
   },
 ]
-export default function Testimonials() {
+
+const Testimonials = memo(function Testimonials() {
   return (
     <section id="testimonials" className="bg-linear-to-br from-blue-900 to-blue-800 p-4 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,7 +40,7 @@ export default function Testimonials() {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((user) => (
-            <TestimonialCard key={user.id} user={user} /> // We are passing the object here that is element of the array.
+            <TestimonialCard key={user.id} user={user} />
           ))}
         </div>
         <div className="mt-12 text-center">
@@ -48,4 +51,6 @@ export default function Testimonials() {
       </div>
     </section>
   )
-}
+})
+
+export default Testimonials
