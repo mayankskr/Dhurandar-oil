@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <section className="flex justify-center bg-blue-50">
-      <header className="container mx-auto fixed z-20 flex justify-between p-2 before:pointer-events-none before:fixed before:left-0 before:bg-blue-50/80 before:backdrop-blur-md before:-z-10 before:h-16 before:top-0 before:w-screen before:shadow-sm">
+      <header className="container mx-auto fixed z-20 flex justify-between p-2 before:pointer-events-none before:fixed before:left-0 before:bg-blue-50/80 before:backdrop-blur-md before:-z-10 before:h-12 md:before:h-16 before:top-0 before:w-screen before:shadow-sm">
 
         <section>
           <p className="text-2xl font-bold tracking-wider text-blue-900">
@@ -48,10 +48,9 @@ export default function Header() {
             <li>
               <a
                 href="#buy"
-                onClick={(e) => handleScroll(e, 'buy')}
-                className="ml-2 rounded-xl bg-blue-600 px-5 py-2 text-white transition duration-300 hover:bg-blue-700 shadow-lg shadow-blue-500/30"
+                className="w-fit rounded-xl border-2 border-blue-900 bg-blue-900 px-2 text-xl text-white transition duration-300 ease-in-out xl:hover:bg-white xl:hover:text-blue-900"
               >
-                Buy Now
+                Buy now
               </a>
             </li>
           </ul>
