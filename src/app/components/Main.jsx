@@ -14,48 +14,40 @@ const Buy = lazy(() => import('./Buy'))
  * 2. Triggers the network fetch.
  * 3. Applies a smooth Fade-In + Slide-Up animation.
  */
-function SmoothSection({ children }) {
+function SmoothSection({ id, children }) {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Load when the section is within 200px of the viewport
         if (entry.isIntersecting) {
           setIsVisible(true)
-          observer.disconnect() // Stop watching once loaded
+          observer.disconnect()
         }
       },
-      { rootMargin: '200px' }
+      { rootMargin: '300px' }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current)
 
     return () => observer.disconnect()
   }, [])
 
   return (
     <div
+      id={id}
       ref={sectionRef}
       className={`transform transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
-      style={{ minHeight: '300px' }} // Reserve space to prevent layout jumps
+      style={{ minHeight: '400px' }}
     >
       {isVisible ? (
-        <Suspense
-          fallback={
-            // A subtle skeleton loader instead of a blank space
-            <div className="w-full h-64 bg-blue-50/50 animate-pulse rounded-xl" />
-          }
-        >
+        <Suspense fallback={<div className="w-full h-64 animate-pulse" />}>
           {children}
         </Suspense>
       ) : (
-        // Invisible placeholder to keep scrollbar stable
         <div className="w-full h-20" />
       )}
     </div>
@@ -69,25 +61,26 @@ export default function Main() {
       <Home />
 
       {/* Subsequent sections load smoothly on scroll */}
-      <SmoothSection>
+      <SmoothSection id="benefit">
         <Benefit />
       </SmoothSection>
 
-      <SmoothSection>
+      <SmoothSection id="how-it-works">
         <Work />
       </SmoothSection>
 
-      <SmoothSection>
+      <SmoothSection id="ingredients">
         <Ingredients />
       </SmoothSection>
 
-      <SmoothSection>
+      <SmoothSection id="testimonials">
         <Testimonials />
       </SmoothSection>
 
-      <SmoothSection>
+      <SmoothSection id="buy">
         <Buy />
       </SmoothSection>
+
     </section>
   )
 }
