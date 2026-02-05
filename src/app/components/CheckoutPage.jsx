@@ -141,7 +141,7 @@ export default function CheckoutPage() {
 
     setStatus("loading");
     try {
-      await axios.post("http://localhost:5000/api/orders/create", {
+      await axios.post("http://dhurandar-oil-backend-production.up.railway.app/api/orders/create", {
         fullName: form.name, email: form.email, phoneNumber: form.phone,
         shippingAddress: { street: form.address, city: form.city, state: form.state, pincode: form.pincode },
         productDetails: { name: productName, quantity, price: totalPrice }, totalAmount: totalPrice, paymentType: form.payment
